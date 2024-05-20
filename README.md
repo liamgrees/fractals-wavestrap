@@ -1,1 +1,1 @@
-These folders contain the MATLAB code used in L.Rs 2024 Thesis at UTS. All credit for the code is given to the original authors, which can be found in the code of each matlab script. There is a readme in wavestrapping that credits the original authors of the code. 
+These folders contain the MATLAB code used in Liam Rees's 2024 Thesis at UTS. All credit for the code is given to the original authors, which can be found in the code of each matlab script. There is a readme in wavestrapping that credits the original authors of the code. 
