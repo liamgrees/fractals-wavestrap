@@ -9,6 +9,9 @@
 
 %  Written by A.M.P. 2019.
 
+% This script was subsequently modified for use in generating wavestrapping images in L.Rs Thesis. 
+%Input image must be square. 
+
 
 %% Input
 imName = {'1';...
