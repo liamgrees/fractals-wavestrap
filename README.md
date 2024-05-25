@@ -10,3 +10,4 @@ wavestrapping contains the MATLAB code used to generate the wavestrapped images.
 
 Final Images.zip contains the final images used in the Thesis including biophilic and AI images. 
 
+cool_wombat.avi is an example of a wavestrapped image being reassembled in video. Credit goes to Puckett AM, Schira MM, Isherwood ZJ, Victor JD, Roberts JA, and Breakspear M. (2020) "Manipulating the structure of natural scenes using wavelets to study the functional architecture of perceptual hierarchies in the brain" NeuroImage. https://www.sciencedirect.com/science/article/pii/S1053811920306595 . The modified script that I used is createStimuli_Thesis.m within the wavestrapped folder. 
