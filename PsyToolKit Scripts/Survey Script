@@ -1,0 +1,841 @@
+scale: PRS-11
+- {score=0} 0
+- {score=1} 1
+- {score=2} 2
+- {score=3} 3
+- {score=4} 4
+- {score=5} 5
+- {score=6} 6
+- {score=7} 7
+- {score=8} 8
+- {score=9} 9
+- {score=10} 10
+
+scale: DASS-10
+- {score=0} Never
+- {score=1} Sometimes
+- {score=2} Often
+- {score=3} Almost Always
+
+l: age
+t: textline
+q: How old are you?
+- {min=18,max=100}
+
+l: gender
+t: radio
+q: What is your gender?
+- Male
+- Female
+- Non-Binary
+- {other,size=50} Prefer to self-describe (please specify)
+
+l: ethnicity
+q: How would you best describe your ethnic origin?
+t: radio
+- Australian
+- Aboriginal/Torres Strait Islander
+- African
+- Asian
+- British
+- European
+- South American
+- North American
+- Central American
+- Oceanian
+- {other,size=80} Other or detailed specific ethnic group name
+
+l: DASS10
+t: scale DASS-10
+q: Please read each statement and select the statement that indicates how much each item has applied to you
+over the PAST WEEK. There are no right or wrong answers. Do not spend too much time on any statement.
+The rating scale is as follows:
+0 - Did not apply to me at all
+1 - Applied to me to some degree, or some of the time
+2 - Applied to me to a considerable degree, or a good part of time
+3 - Applied to me very much, or most of the time
+- I felt I was close to panic
+- I found it difficult to work up the initiative to do things
+- I felt downhearted and blue
+- I was intolerant of anything that kept me from getting on with what I was doing
+- I felt that I had nothing to look forward to 
+- I felt scared without any good reason
+- I tended to over react to situations
+- I was worried about situations in which I might panic and make a fool of myself 
+- I found it difficult to relax 
+- I couldn’t seem to experience any positive feelings at all
+
+l: decide_what_people_get
+t: jump
+- if $psy_group = 1 then goto stressbaseline1
+- if $psy_group = 2 then goto stressbaseline2
+- if $psy_group = 3 then goto stressbaseline3
+- if $psy_group = 4 then goto stressbaseline4
+- if $psy_group = 5 then goto stressbaseline5
+
+l: stressbaseline1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbaseline1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: natureimagesequence1
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- natureimagesequence
+
+l: stressnature1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodnature1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSnature1
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: scrambledimagesequence1
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- scrambledimagesequence
+
+l: stressscrambled1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodscrambled1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+
+l: AIimagesequence
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- AIimagesequence
+
+l: stressAI1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodAI1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSAI1
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: biophilicimagesequence1
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- biophilicimagesequence
+
+l: stressbiophilic1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbiophilic1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSbiophilic1
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: urbanimagesequence1
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- urbanimagesequence
+
+l: stressurban1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodurban1
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSurban1
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: alwaysjump1
+t: jump
+- goto end
+
+l: stressbaseline2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbaseline2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: scrambledimagesequence2
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- scrambledimagesequence2
+
+l: stressscrambled2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodscrambled2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: AIimagesequence2
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- AIimagesequence2
+
+l: stressAI2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodAI2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSAI2
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: biophilicimagesequence2
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- biophilicimagesequence2
+
+l: stressBiophilic2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodBiophilic2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSbiophilic2
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: urbanimagesequence2
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- urbanimagesequence2
+
+l: stressurban2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodurban2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSurban2
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: natureimagesequence2
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- natureimagesequence2
+
+l: stressnature2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodnature2
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSnature2
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: alwaysjump2
+t: jump
+- goto end
+
+l: stressbaseline3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbaseline3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: AIimagesequence3
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- AIimagesequence3
+
+l: stressAI3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodAI3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSAI3
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: biophilicimagesequence3
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- biophilicimagesequence3
+
+l: stressbiophilic3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbiophilic3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSbiophilic3
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: urbanimagesequence3
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- urbanimagesequence3
+
+l: stressurban3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodurban3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSurban3
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: natureimagesequence3
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- natureimagesequence3
+
+l: stressnature3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodnature3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSnature3
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: scrambledimagesequence3
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- scrambledimagesequence3
+
+l: stressscrambled3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodscrambled3
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: alwaysjump3
+t: jump
+- goto end
+
+l: stressbaseline4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbaseline4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: biophilicimagesequence4
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- biophilicimagesequence4
+
+l: stressbiophilic4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbiophilic4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSbiophilic4
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: urbanimagesequence4
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- urbanimagesequence4
+
+l: stressurban4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodurban4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSurban4
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: natureimagesequence4
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- natureimagesequence4
+
+l: stressnature4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodnature4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSnature4
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: scrambledimagesequence4
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- scrambledimagesequence4
+
+l: stressscrambled4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodscrambled4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: AIimagesequence4
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- AIimagesequence4
+
+l: stressAI4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodAI4
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSAI4
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: alwaysjump4
+t: jump
+- goto end
+
+l: stressbaseline5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbaseline5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: urbanimagesequence5
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- urbanimagesequence5
+
+l: stressurban5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodurban5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSurban5
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: natureimagesequence5
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- natureimagesequence5
+
+l: stressnature5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodnature5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSnature5
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: scrambledimagesequence5
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes.
+t: experiment
+- scrambledimagesequence5
+
+l: stressscrambled5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodscrambled5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: AIimagesequence5
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- AIimagesequence5
+
+l: stressAI5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodAI5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSAI5
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: biophilicimagesequence5
+q: Please pay attention to the following images. The image sequence will take 2 and a half minutes. 
+t: experiment
+- biophilicimagesequence5
+
+l: stressbiophilic5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=No Stress,right= The Most Stress,start=50,min=0,max=100,no_number}
+
+l: moodbiophilic5
+t: range
+q: Click the position on the scale that best represents how you feel right now.
+- {left=Poor Mood,right=Great Mood,start=50,min=0,max=100,no_number}
+
+l: PRSbiophilic5
+t: scale PRS-11
+q: Please read each statement carefully, then ask yourself: "How much does this statement apply to my experience of the environment(s) I just viewed?". To indicate your answer, select only one number on the rating scale beside the statement. 
+For example, if you thought that the statement did not apply at all to your experience of the environment, then you could select "0" (not at all), if you thought it applied quite a lot, then you could select "6" (quite a lot), and if you thought that it applied very much, you could select “10” (very much). 
+- Places like that are fascinating
+- In places like this my attention is drawn to many interesting things
+- In places like this it is hard to be bored
+- Places like that are a refuge from nuisances
+- To get away from things that usually demand my attention I like to go to places like this
+- To stop thinking about the things that I must get done I like to go to places like this
+- There is a clear order in the physical arrangement of places like this
+- In places like this it is easy to see how things are organised
+- In places like this everything seems to have its proper place
+- That place is large enough to allow exploration in many directions
+- In places like that there are few boundaries to limit my possibility for moving about
+
+l: end
+t: info
+q: Thank you for completing our experiment<br>
+You will now be presented with some information about the experiment.
