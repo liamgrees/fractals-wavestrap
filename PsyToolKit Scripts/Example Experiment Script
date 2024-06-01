@@ -1,0 +1,24 @@
+# enter code
+options
+  fullscreen
+  resolution 667 667
+
+videos
+  clip1 https://www.dropbox.com/scl/fi/er9sber91n4c6eqw0zjwe/scrambled10.mp4?rlkey=vn3sowjx3nk9i9cmtjivast9c&raw=1
+
+task video 1
+  keys space
+  show text "You will now be shown a series of images." 0 -200
+  show text "Please pay close attention to the images presented." 0 -100
+  show text "Press Spacebar when you are ready to start" 0 200
+  readkey 1 50000
+  clear screen
+  show video clip1
+  delay 150000
+  clear -1
+
+block test
+  tasklist
+    video 1
+  end
+
