@@ -2,6 +2,8 @@ These folders contain the MATLAB code used in Liam Rees's 2024 Thesis at UTS. Al
 
 Folder Explanations and Credit:
 
+PsyToolKit Scripts include the full custom coded Survey script for PsyToolKit along with an example of one of the experiment conditions.
+
 batchimagecheck contains the MATLAB used to generate fractal D of all images for the analysis. All credit for this code goes to Zoey Isherwood. 
 
 fractaledgedetection contains the MATLAB script used for generating edge detected visualiations of nature and wavestrapped images. It can also be used to generate an image's fractal dimension based on this edge detection. However, for our Thesis we found the edge detection didn't accurately capture edges in images with enough precision for calculation of fractal D. 
