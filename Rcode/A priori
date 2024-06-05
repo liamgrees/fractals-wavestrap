@@ -15,7 +15,7 @@ s <- 10
 model1 <- makeLmer(y ~ imagegroup + (1|mockid) + (imagegroup | mockdistress), fixef=coef, VarCorr=V1, sigma=s, data=mockdata)
 model_ext = extend(model1, along = 'mockid', n = 100)
 plot(powerCurve(model_ext, fixed('imagegroup'), along = 'mockid', nsim = 50))
-model_80 = extend(model, along = 'id', n = 80)
+model_80 = extend(model1, along = 'mockid', n = 80)
 powerSim(model_80, nsim = 150)
 
 
