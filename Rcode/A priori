@@ -1,0 +1,12 @@
+library(simr)
+library(dplyr)
+coef <- c(50, -7.5, -15)
+V1 <- list(5, 5, .05, .05, .05, .05, .05)
+s <- 10
+model1 <- makeLmer(y ~ imagegroup + (1|id) + (imagegroup | distress), fixef=coef, VarCorr=V1, sigma=s, data=covars)
+model_ext = extend(model1, along = 'id', n = 100)
+plot(powerCurve(model_ext, fixed('imagegroup'), along = 'id', nsim = 50))
+model_80 = extend(model, along = 'id', n = 80)
+powersim(model_80, n = 150)
+
+
