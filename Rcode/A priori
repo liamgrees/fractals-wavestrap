@@ -1,5 +1,6 @@
 library(simr)
 library(dplyr)
+library
 coef <- c(50, -7.5, -15)
 V1 <- list(5, 5, .05, .05, .05, .05, .05)
 s <- 10
