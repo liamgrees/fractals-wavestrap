@@ -1,3 +1,5 @@
+install.packages("simr")
+install.packages("dplyr")
 library(simr)
 library(dplyr)
 mockid <- rep(1:60, each = 3)
@@ -14,6 +16,6 @@ model1 <- makeLmer(y ~ imagegroup + (1|mockid) + (imagegroup | mockdistress), fi
 model_ext = extend(model1, along = 'mockid', n = 100)
 plot(powerCurve(model_ext, fixed('imagegroup'), along = 'mockid', nsim = 50))
 model_80 = extend(model, along = 'id', n = 80)
-powerSim(model_80, nsims = 150)
+powerSim(model_80, nsim = 150)
 
 
