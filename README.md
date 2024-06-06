@@ -2,6 +2,8 @@ These folders contain the MATLAB code used in Liam Rees's 2024 Thesis at UTS. Al
 
 Folder Explanations and Credit:
 
+Rcode contains all the code used in R mentioned throughout the Thesis. This will continue to be updated after Thesis submission to be fully recreatable. 
+
 PsyToolKit Scripts include the full custom coded Survey script for PsyToolKit along with an example of one of the experiment conditions.
 
 batchimagecheck contains the MATLAB used to generate fractal D of all images for the analysis. All credit for this code goes to Zoey Isherwood. 
